@@ -12,13 +12,12 @@ I found coding very interesting. I wanted to find a somewhat interesting form of
 
 ### Plan:
 - Defined proper layout and functions
-
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/1540798d-ee8d-43e3-9333-670b0d6cf4d0" />
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/20c09a6f-5f64-45f9-a844-230d90fda9de" />
+<img width="1920" height="1080" alt="3" src="https://github.com/user-attachments/assets/cea361b2-ab9e-40e7-8f7f-50f621e6ef34" />
 
 ### Build:
 - Weeks of coding, testing, and iterating, to develop core features necessary for the website.
-- Integrate outside functions and APIs _(i.e. Google Login)_
-
-
 ![Captureii](https://github.com/blwhit/Web-Application-Development/assets/141170960/8c207e9e-252e-44ea-8291-b5b5b253f0db)
 ![Capture;;](https://github.com/blwhit/Web-Application-Development/assets/141170960/51d426cb-8555-4d9f-828d-a84d6a853e70)
 
