@@ -17,26 +17,13 @@ I found coding very interesting. I wanted to find a somewhat interesting form of
 <img width="1920" height="1080" alt="3" src="https://github.com/user-attachments/assets/cea361b2-ab9e-40e7-8f7f-50f621e6ef34" />
 
 ### Build:
-- Weeks of coding, testing, and iterating, to develop core features necessary for the website.
+- Weeks of coding, testing, and iterating, to develop core features necessary for the website, some changes were made in the process.
 <img width="1268" height="825" alt="Screenshot 2025-11-05 at 1 10 43 PM" src="https://github.com/user-attachments/assets/0619308c-0699-4a55-9109-9c705c5958f9" />
 
-### Test:
+### Test & Release:
 - User testings and usability testing to restructure and re-tune the features, layout, and flow of our site
 - Finalizing website features and revisiting code
-
-
-![eee](https://github.com/blwhit/Web-Application-Development/assets/141170960/ad4da2f5-cced-464d-98d8-7fba09c6210f)
-![Capturedd](https://github.com/blwhit/Web-Application-Development/assets/141170960/928731a7-7a04-41c4-8e6e-8bef40c25e9c)
-
-
-
-# Final Product 
-The Hoosier Connection: 
-- Project Video: https://youtu.be/HqRRjv94l-w 
-- Full Project Report: https://docs.google.com/document/d/1Pj3iCFO3gxrUpi_rR1D_LqG7oXNGsWtOgm6fDVylPxk/edit?usp=sharing
-
-
-![Capturekkk](https://github.com/blwhit/Web-Application-Development/assets/141170960/cfd6167e-43db-4640-a71d-766ffedd612d)
-![Capturesdfsdf](https://github.com/blwhit/Web-Application-Development/assets/141170960/bec96fb8-e8dd-425d-8f45-99a7a7fbcb8e)
-![Capturesdfsdaf](https://github.com/blwhit/Web-Application-Development/assets/141170960/121731da-8c62-4a90-b254-7e2869abcc2b)
-![fffff](https://github.com/blwhit/Web-Application-Development/assets/141170960/279d3feb-9d0e-48b1-8744-5981e6dab052)
+<img width="1905" height="936" alt="Screenshot 2025-11-05 at 1 12 38 PM" src="https://github.com/user-attachments/assets/fa858aaa-6812-438c-a5c8-c11af8d7044e" />
+<img width="1906" height="930" alt="Screenshot 2025-11-05 at 1 12 48 PM" src="https://github.com/user-attachments/assets/314c22a3-b25e-4f31-a91f-e376fc8fdbc3" />
+<img width="1916" height="931" alt="Screenshot 2025-11-05 at 1 13 03 PM" src="https://github.com/user-attachments/assets/92fca123-d90a-4dc4-9c2f-1e32c927d050" />
+<img width="1903" height="932" alt="Screenshot 2025-11-05 at 1 13 17 PM" src="https://github.com/user-attachments/assets/c0cebf0d-2442-4ec4-80a3-e67424398aed" />
