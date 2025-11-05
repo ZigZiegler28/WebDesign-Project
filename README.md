@@ -5,17 +5,13 @@ I found coding very interesting. I wanted to find a somewhat interesting form of
 
 ## Project Planning
 - Defined key individual responsibilities, developed wireframes, and identifying proper steps for deployment
-<img width="499" height="649" alt="OnSitePlanning" src="https://github.com/user-attachments/assets/23dd4396-cdc0-4d78-a6c4-ae57cd610365" />
-<img width="496" height="643" alt="OnSitePlanning2" src="https://github.com/user-attachments/assets/104a3fff-5570-4406-a827-4658d4ed92a4" />
-<img width="497" height="646" alt="OffSitePlanning" src="https://github.com/user-attachments/assets/a2d35974-af98-4782-993d-d0487ac00179" />
+<img width="499" height="649" alt="OnSitePlanning" src="https://github.com/user-attachments/assets/44b3f8da-01c3-4b5c-a5a2-933ba345fd17" />
+<img width="496" height="643" alt="OnSitePlanning2" src="https://github.com/user-attachments/assets/12a6d5b9-0f59-40aa-a619-1191847eaccd" />
+<img width="497" height="646" alt="OffSitePlanning" src="https://github.com/user-attachments/assets/8305ddcb-6b75-4aea-84f0-804d8b0248cb" />
+
 
 ### Plan:
 - Defined proper layout and functions
-<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/67efa877-813b-4bca-b385-86981f9c084c" />
-<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/5fb5411b-102c-4b1a-bc39-bc8bb51bebc0" />
-<img width="1920" height="1080" alt="3" src="https://github.com/user-attachments/assets/5c7d35ed-48f7-428a-ab15-de845bb143cc" />
-
-
 
 
 ### Build:
