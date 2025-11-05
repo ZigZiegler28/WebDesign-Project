@@ -18,9 +18,7 @@ I found coding very interesting. I wanted to find a somewhat interesting form of
 
 ### Build:
 - Weeks of coding, testing, and iterating, to develop core features necessary for the website.
-![Captureii](https://github.com/blwhit/Web-Application-Development/assets/141170960/8c207e9e-252e-44ea-8291-b5b5b253f0db)
-![Capture;;](https://github.com/blwhit/Web-Application-Development/assets/141170960/51d426cb-8555-4d9f-828d-a84d6a853e70)
-
+<img width="1268" height="825" alt="Screenshot 2025-11-05 at 1 10 43 PM" src="https://github.com/user-attachments/assets/0619308c-0699-4a55-9109-9c705c5958f9" />
 
 ### Test:
 - User testings and usability testing to restructure and re-tune the features, layout, and flow of our site
