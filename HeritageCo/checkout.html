@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.info-section {
+    width: 48%;
+    padding-right: 15px;
+    height: auto; /* Remove max-height and overflow for no scrolling */
+}
+
+.info-section img {
+    display: block;
+    margin: 0 auto; /* This will center the image horizontally */
+}
+
+.cart-summary {
+    position: sticky;
+    top: 30px; /* Adjust this value to control how far from the top it sticks */
+    width: 48%;
+    height: fit-content; /* Ensure it adjusts to content height */
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart-summary .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cart-summary .cart-shipping {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.cart-summary .cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+
+.cart-item p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-item.total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px; /* Adds space between the input fields */
+}
+
+.name-fields input {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+}
+
+.shipping-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between the shipping options */
+}
+
+.shipping-method {
+    display: flex;
+    justify-content: space-between; /* Aligns items to opposite sides */
+    align-items: center; /* Vertically centers the items */
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-method input[type="radio"] {
+    margin-right: 15px; /* Adds space between radio button and text */
+}
+
+.shipping-info {
+    flex: 1;
+}
+
+.shipping-info h3, .shipping-info p {
+    margin: 0;
+}
+
+.shipping-info h3 {
+    font-size: 15px;
+}
+
+.shipping-info p {
+    font-size: 12px;
+}
+
+.shipping-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: black; /* Adjust color to make the price stand out */
+}
+
+
+
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column; /* Stack the sections vertically */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .info-section, .cart-summary {
+        width: 100%; /* Make each section take up the full width */
+        margin-bottom: 30px; /* Add space between the sections */
+    }
+
+    .info-section {
+        height: auto; /* Remove the fixed height */
+    }
+
+    .cart-summary {
+        margin-top: 0; /* Remove the top margin */
+    }
+}
+
+@media (min-width: 769px) {
+    .cart-summary h2 {
+        display: none;
+    }
+}
+
+.cart-item-quantity {
+    text-align: left;
+}
+
+
+
+
+.discount-code {
+    margin-top: 20px;
+}
+
+.discount-code label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.discount-input-container {
+    display: flex;
+    gap: 10px; /* Adds space between the input and button */
+    align-items: center;
+}
+
+.discount-input-container input {
+    flex: 1; /* Makes the input take up available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.discount-input-container button {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.discount-input-container button:hover {
+    background-color: #45a049; /* Change button color on hover */
+}
+
+.cart-shipping, .cart-subtotal, .cart-item.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 1.1em;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="info-section">
+            <img src="heritage-logo.png" style="width: 200px;" alt="heritage-logo">
+            <h2>Contact</h2>
+            <input type="text" placeholder="Email" required>
+            <input type="checkbox">
+            <p style="display: inline-block;">Email me with news and offers</p>
+            <br>
+            <h2>Delivery</h2>
+            <select>
+                <option>United States</option>
+                <option>Canada</option>
+            </select>
+            <div class="name-fields">
+                <input type="text" placeholder="First Name (optional)">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <input type="text" placeholder="Address" required>
+            <input type="text" placeholder="Apartment, suite, etc. (optional)">
+            <div class="name-fields">
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="State" required>
+                <input type="text" placeholder="Zip Code" required>
+            </div>
+            <input type="checkbox">
+            <p style="display: inline-block;">Text me with news and offers</p>
+            <br>
+            <h2>Shipping Methods</h2>
+            <div class="shipping-methods">
+                <div class="shipping-method">
+                    <input type="radio" name="shipping-method" id="standard-shipping" class="shipping-radio" checked>
+                    <div class="shipping-info">
+                        <h3>Standard Shipping</h3>
+                        <p>Delivery in 5-7 business days</p>
+                    </div>
+                    <span class="shipping-price">$5.00</span>
+                </div>
+                <div class="shipping-method">
+                    <input type="radio" name="shipping-method" id="express-shipping" class="shipping-radio">
+                    <div class="shipping-info">
+                        <h3>Express Shipping</h3>
+                        <p>Delivery in 2-3 business days</p>
+                    </div>
+                    <span class="shipping-price">$15.00</span>
+                </div>
+                <div class="shipping-method">
+                    <input type="radio" name="shipping-method" id="overnight-shipping" class="shipping-radio">
+                    <div class="shipping-info">
+                        <h3>Overnight Shipping</h3>
+                        <p>Next-Day Delivery</p>
+                    </div>
+                    <span class="shipping-price">$25.00</span>
+                </div>
+            </div>
+            <br>
+            <h3>Payment</h3>
+            <p>All transactions are secure and encrypted.</p>
+            <h6 style="font-weight: bold;">Card Information</h6>
+            <div class="name-fields">
+                <input type="text" placeholder="Expiration Date" required>
+                <input type="text" placeholder="Security Code" required>
+            </div>
+            <input type="text" placeholder="Name On Card">
+            <br><br>
+            <h3>Billing Address</h3>
+            <p>If same as delivery address leave blank</p>
+            <select>
+                <option>United States</option>
+                <option>Canada</option>
+            </select>
+            <div class="name-fields">
+                <input type="text" placeholder="First Name (optional)">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <input type="text" placeholder="Address">
+            <input type="text" placeholder="Apartment, suite, etc. (optional)">
+            <div class="name-fields">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="State">
+                <input type="text" placeholder="Zip Code">
+            </div>
+            <button class="checkout-btn">Place Order</button>
+        </div>
+
+        <!-- Cart Summary-->
+         <div>
+            <h2>Cart Summary</h2>
+            <div class="cart-items" id="cartItemsContainer" style="border-bottom: 1px solid #b4b4b4;"></div>
+            <div class="discount-code">
+                <label for="discountCode">Discount Code</label>
+                <div class="discount-input-container">
+                    <input type="text" id="discountCode" placeholder="Enter Discount Code">
+                    <button id="applyDiscountBtn">Apply</button>
+                </div>
+                <p id="discountMessage" style="color: red;display: none;">Invalid Discount Code</p>
+            </div>
+            <div class="cart-shipping">
+                <p>Shipping</p>
+                <p id="shippingCost">$0.00</p>
+            </div>
+            <div class="cart-subtotal">
+                <p>Subtotal</p>
+                <p id="cartSubtotal">$0.00</p>
+            </div>
+            <div class="cart-item total">
+                <p>Total</p>
+                <p id="cartTotal">$0.00</p>
+            </div>
+         </div>
+    </div>
+
+    <script>
+    // ########################## Checkout Cart Summary ##########################
+    // On page load, render cart from localStorage and calculate totals
+    window.addEventListener('load', function() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    renderCart(cart);  // Render the cart items
+    updateCartSummary(cart);  // Update total price for cart items
+    updateShippingCost();  // Update shipping cost
+
+    // Add event listener to update shipping cost when shipping method changes
+    const shippingMethods = document.querySelectorAll('input[name="shipping-method"]');
+    shippingMethods.forEach(method => {
+        method.addEventListener('change', function() {
+            updateShippingCost(); // Recalculate shipping cost when shipping method changes
+            updateCartSummary(cart); // Recalculate cart summary with updated shipping cost
+        });
+    });
+
+    // Add event listener for discount code button
+    const applyDiscountBtn = document.getElementById('applyDiscountBtn');
+    if (applyDiscountBtn) {
+        applyDiscountBtn.addEventListener('click', function() {
+            applyDiscountCode();
+        });
+    }
+    });
+
+    // Function to render the cart items in the checkout page
+    function renderCart(cart) {
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    if (!cartItemsContainer) return;
+
+    cartItemsContainer.innerHTML = ''; // Clear any existing cart items
+
+    cart.forEach(item => {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+            <img src="${item.imageUrl}" alt="Product Image" class="cart-item-image">
+            <div class="cart-item-details">
+                <span class="cart-item-name">${item.itemName}</span>
+                <div class="cart-item-single-price">$${item.price}</div>
+                <div class="cart-item-size">Size: ${item.size}</div>
+                <div class="cart-item-color">Color: ${item.color}</div>
+                <div class="cart-item-quantity">Quantity: ${item.quantity}</div>
+            </div>
+            <span class="cart-item-price">$${item.totalPrice.toFixed(2)}</span>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+    });
+    }
+
+    // Function to update the total amount in the cart (Subtotal, Shipping, and Total)
+    function updateCartSummary(cart) {
+    let subtotal = 0;
+    cart.forEach(item => {
+        subtotal += item.totalPrice;  // Add the totalPrice of each item
+    });
+
+    const shippingCost = parseFloat(document.querySelector('input[name="shipping-method"]:checked + .shipping-info + .shipping-price').textContent.replace('$', '').trim()) || 0;
+    const total = subtotal + shippingCost;  // Subtotal + Shipping Cost
+
+    const cartSubtotal = document.getElementById('cartSubtotal');
+    const shippingCostElement = document.getElementById('shippingCost');
+    const cartTotal = document.getElementById('cartTotal');
+
+    if (cartSubtotal) cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+    if (shippingCostElement) shippingCostElement.textContent = `$${shippingCost.toFixed(2)}`;
+    if (cartTotal) cartTotal.textContent = `$${total.toFixed(2)}`;
+    }
+
+    // Function to update the shipping cost based on the selected shipping method
+    function updateShippingCost() {
+    const shippingMethods = document.querySelectorAll('input[name="shipping-method"]');
+    let selectedShippingPrice = 5.00;  // Default shipping cost for Standard Shipping
+
+    shippingMethods.forEach(method => {
+        if (method.checked) {
+            // Find the selected shipping cost (parse it from the price element)
+            const shippingPriceText = method.closest('.shipping-method').querySelector('.shipping-price').textContent;
+            selectedShippingPrice = parseFloat(shippingPriceText.replace('$', '').trim());
+        }
+    });
+
+    const shippingCostElement = document.getElementById('shippingCost');
+    if (shippingCostElement) {
+        shippingCostElement.textContent = `$${selectedShippingPrice.toFixed(2)}`;
+    }
+    updateCartSummary(JSON.parse(localStorage.getItem('cart')) || []);  // Recalculate the cart summary with new shipping cost
+    }
+
+    // Function to apply discount code
+    function applyDiscountCode() {
+    const discountCode = document.getElementById('discountCode').value;
+    const discountMessage = document.getElementById('discountMessage');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Example of validating discount code, you can replace with actual validation logic
+    if (discountCode === 'DISCOUNT10') {
+        const discountAmount = 0.10;  // 10% discount
+        const discountValue = cart.reduce((total, item) => total + item.totalPrice, 0) * discountAmount;
+        const updatedTotal = cart.reduce((total, item) => total + item.totalPrice, 0) - discountValue;
+        
+        // Update the cart total with the discounted price
+        document.getElementById('cartTotal').textContent = `$${updatedTotal.toFixed(2)}`;
+        discountMessage.style.display = 'none';
+    } else {
+        discountMessage.style.display = 'block';
+    }
+    }
+    </script>
+</body>
+</html>
